@@ -2,114 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd37d3f7-8df3-4851-8132-4dcb7564029c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/hazelcast_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lang_scala_0_2_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mod-auth-manager.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/netty_all_4_0_7_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/scala_compiler_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/scala_library_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/scala_reflect_2_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/slf4j_api_1_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/testtools_2_0_0_final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/vertx_core_2_0_1_final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/vertx_platform_2_0_1_final.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$2$$anonfun$apply$2$$anonfun$apply$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$2$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$3$$anonfun$apply$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$5$$anonfun$apply$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$6$$anonfun$apply$6$$anonfun$apply$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$6$$anonfun$apply$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$7$$anonfun$apply$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$8$$anonfun$apply$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$start$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_delete$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_login$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_query$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_retrieve$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_signup$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_update$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth$$anonfun$users_update$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/Auth.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/BCrypt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/BCrypt.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/resources/background.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/resources/tab.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/resources/titlebar.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/resources/titlebar_end.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Auth-0.1-javadoc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Auth-0.1-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Auth-0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/Auth-0.1.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$2$$anonfun$apply$2$$anonfun$apply$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$2$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$3$$anonfun$apply$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$5$$anonfun$apply$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$6$$anonfun$apply$6$$anonfun$apply$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$6$$anonfun$apply$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$7$$anonfun$apply$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$8$$anonfun$apply$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$start$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_delete$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_login$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_query$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_retrieve$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_signup$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_update$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth$$anonfun$users_update$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/Auth.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/BCrypt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/lib/lang-scala-0.2.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/lib/scala-compiler-2.10.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/lib/scala-library-2.10.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/lib/scala-reflect-2.10.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/mods/ssky~Auth~0.1/mod.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/resources/main/mod.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/javadocJar/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/sourceJar/MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Auth.scala" afterPath="$PROJECT_DIR$/src/main/scala/Auth.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod-auth-manager.iml" afterPath="$PROJECT_DIR$/mod-auth-manager.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mod.json" afterPath="$PROJECT_DIR$/src/main/resources/mod.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/scala_compiler_2_10_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/scala_compiler_2_10_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/scala_library_2_10_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/scala_library_2_10_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/scala_reflect_2_10_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/scala_reflect_2_10_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mod-auth-manager.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383812665628" ignored="false" />
-    <file path="/Auth.scala" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383816311495" ignored="false" />
+    <file path="/Dummy.txt" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383825799518" ignored="false" />
+    <file path="/Auth.scala" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383826022617" ignored="false" />
+    <file path="/mod.json" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383823145105" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +31,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -161,6 +67,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -188,26 +95,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="gradlew.bat" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradlew.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradlew" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradlew">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -224,22 +113,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="Auth.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="43" column="34" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.6627517">
+              <folding>
+                <element signature="e#1#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Auth.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
+      <file leaf-file-name="mod.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mod.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="37" selection-start="9834" selection-end="9834" vertical-scroll-proportion="0.084821425">
-              <folding>
-                <element signature="e#1#39#0" expanded="true" />
-              </folding>
+            <state line="2" column="13" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -261,14 +150,26 @@
   </component>
   <component name="GradleLocalSettings">
     <option name="availableTasks">
-      <list>
+      <set>
         <GradleTaskDescriptor>
-          <option name="description" value="Compiles the test Java source." />
-          <option name="name" value="compileTestJava" />
+          <option name="description" value="Assembles the outputs of this project." />
+          <option name="name" value="assemble" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="description" value="Builds a source jar artifact suitable for maven deployment." />
-          <option name="name" value="sourceJar" />
+          <option name="description" value="Assembles and tests this project." />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+          <option name="name" value="buildDependents" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects it depends on." />
+          <option name="name" value="buildNeeded" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all checks." />
+          <option name="name" value="check" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Assembles the main classes." />
@@ -279,107 +180,108 @@
           <option name="name" value="clean" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="description" value="Does a maven install of the archives artifacts into the local .m2 cache." />
-          <option name="name" value="install" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Builds a javadoc jar artifact suitable for maven deployment." />
-          <option name="name" value="javadocJar" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Run the module using all the build dependencies (not using installed vertx" />
-          <option name="name" value="runMod" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project and all projects it depends on." />
-          <option name="name" value="buildNeeded" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Does a maven deploy of archives artifacts" />
-          <option name="name" value="uploadArchives" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assemble the module into the local mods directory" />
-          <option name="name" value="copyMod" />
+          <option name="description" value="Compiles the main Java source." />
+          <option name="name" value="compileJava" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Compiles the main Scala source." />
           <option name="name" value="compileScala" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="description" value="Assembles a vert.x module" />
-          <option name="name" value="modZip" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles the outputs of this project." />
-          <option name="name" value="assemble" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project." />
-          <option name="name" value="build" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Pull in all the module dependencies for the module into the nested mods directory" />
-          <option name="name" value="pullInDeps" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Creates a fat executable jar which contains everything needed to run the module" />
-          <option name="name" value="fatJar" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Compiles the main Java source." />
-          <option name="name" value="compileJava" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Runs the unit tests." />
-          <option name="name" value="test" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="name" value="signArchives" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Starts a Scala REPL with the main runtime class path." />
-          <option name="name" value="scalaConsole" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-          <option name="name" value="buildDependents" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Generates scaladoc for the main source code." />
-          <option name="name" value="scaladoc" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Assembles the test classes." />
-          <option name="name" value="testClasses" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Processes the main resources." />
-          <option name="name" value="processResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Generates Javadoc API documentation for the main source code." />
-          <option name="name" value="javadoc" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Processes the test resources." />
-          <option name="name" value="processTestResources" />
-        </GradleTaskDescriptor>
-        <GradleTaskDescriptor>
-          <option name="description" value="Starts a Scala REPL with the test runtime class path." />
-          <option name="name" value="scalaTestConsole" />
+          <option name="description" value="Compiles the test Java source." />
+          <option name="name" value="compileTestJava" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Compiles the test Scala source." />
           <option name="name" value="compileTestScala" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
-          <option name="description" value="Runs all checks." />
-          <option name="name" value="check" />
+          <option name="description" value="Assemble the module into the local mods directory" />
+          <option name="name" value="copyMod" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Creates a fat executable jar which contains everything needed to run the module" />
+          <option name="name" value="fatJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Does a maven install of the archives artifacts into the local .m2 cache." />
+          <option name="name" value="install" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
           <option name="description" value="Assembles a jar archive containing the main classes." />
           <option name="name" value="jar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Javadoc API documentation for the main source code." />
+          <option name="name" value="javadoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Builds a javadoc jar artifact suitable for maven deployment." />
+          <option name="name" value="javadocJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a vert.x module" />
+          <option name="name" value="modZip" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes the main resources." />
+          <option name="name" value="processResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes the test resources." />
+          <option name="name" value="processTestResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Pull in all the module dependencies for the module into the nested mods directory" />
+          <option name="name" value="pullInDeps" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Run the module using all the build dependencies (not using installed vertx" />
+          <option name="name" value="runMod" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Starts a Scala REPL with the main runtime class path." />
+          <option name="name" value="scalaConsole" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Starts a Scala REPL with the test runtime class path." />
+          <option name="name" value="scalaTestConsole" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates scaladoc for the main source code." />
+          <option name="name" value="scaladoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="signArchives" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Builds a source jar artifact suitable for maven deployment." />
+          <option name="name" value="sourceJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs the unit tests." />
+          <option name="name" value="test" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the test classes." />
+          <option name="name" value="testClasses" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Does a maven deploy of archives artifacts" />
+          <option name="name" value="uploadArchives" />
+        </GradleTaskDescriptor>
+      </set>
+    </option>
+    <option name="expandStates">
+      <map>
+        <entry key="mod-auth-manager" value="true" />
+      </map>
+    </option>
+    <option name="recentTasks">
+      <list>
+        <GradleTaskDescriptor>
+          <option name="executorId" value="Run" />
+          <option name="name" value="build" />
         </GradleTaskDescriptor>
       </list>
     </option>
@@ -387,12 +289,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/main/resources/mod.json" />
         <option value="$PROJECT_DIR$/src/main/scala/Auth.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-60" />
     <option name="y" value="22" />
     <option name="width" value="1347" />
     <option name="height" value="833" />
@@ -423,6 +325,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -483,28 +387,50 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.project.gradle" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="gradle.tool.window.active" value="Tasks" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Groovy.gradle:build">
+    <configuration default="false" name="gradle:build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="mod-auth-manager" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="build" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -513,6 +439,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -540,19 +479,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -589,13 +515,37 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Groovy.gradle:build" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Groovy.gradle:build" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bd37d3f7-8df3-4851-8132-4dcb7564029c" name="Default" comment="" />
@@ -605,29 +555,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-60" y="22" width="1347" height="833" extended-state="0" />
+    <frame x="0" y="22" width="1347" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289777" sideWeight="0.7349229" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1829362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1829362" sideWeight="0.7349229" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26422763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -695,7 +645,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -709,11 +666,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="28" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mod.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
@@ -725,9 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -744,11 +732,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mod.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="37" selection-start="9834" selection-end="9834" vertical-scroll-proportion="0.084821425">
+        <state line="43" column="34" selection-start="1714" selection-end="1714" vertical-scroll-proportion="0.6627517">
           <folding>
-            <element signature="e#1#39#0" expanded="true" />
+            <element signature="e#1#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

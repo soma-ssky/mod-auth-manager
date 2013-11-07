@@ -1,4 +1,5 @@
 
+import org.vertx.java.busmods.BusModBase
 import org.vertx.java.core.AsyncResult
 import org.vertx.java.core.buffer.Buffer
 import org.vertx.scala.platform.Verticle
@@ -13,8 +14,9 @@ import java.text.SimpleDateFormat         // ISODate
 import java.security.SecureRandom;        // Session
 import java.math.BigInteger;              // Session
 
-class Auth extends Verticle {
 
+class Auth extends Verticle{
+    
   //////////////////////////////////////////////
   // User Module
   //////////////////////////////////////////////
@@ -28,7 +30,7 @@ class Auth extends Verticle {
 
   //회원가입
   def users_signup(msg:Message[JsonObject]){
-
+        
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"save","collection":"User"}""")
 
@@ -259,7 +261,7 @@ class Auth extends Verticle {
     val eventbus = vertx.eventBus
     var routeMatcher = new RouteMatcher
 
-      // 기본 설정
+    // 기본 설정
     val config_ssky = new JsonObject()
     config_ssky.putString("url","http://api.ssky.io/") // URL 설정
     config_ssky.putString("host","localhost")         // 호스트 설정
@@ -287,5 +289,6 @@ class Auth extends Verticle {
   // 서버 로그
   //def handle(request:HttpServerRequest){ request.response.end("hello mod-lang-scala!!") }
   //override def stop(){ serverlog("서버가 정상적으로 종료되었습니다.") }
+
 
 }

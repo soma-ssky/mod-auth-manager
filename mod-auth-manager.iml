@@ -15,7 +15,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="vertx-platform-2.0.1-final" level="project" />
-    <orderEntry type="library" exported="" name="scala-reflect-2.10.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="vertx-core-2.0.1-final" level="project" />
     <orderEntry type="library" scope="TEST" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="slf4j-api-1.6.2" level="project" />
@@ -23,13 +22,14 @@
     <orderEntry type="library" scope="TEST" name="testtools-2.0.0-final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="jackson-core-2.2.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="hazelcast-2.6" level="project" />
-    <orderEntry type="library" exported="" name="scala-library-2.10.3" level="project" />
-    <orderEntry type="library" exported="" name="scala-compiler-2.10.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="netty-all-4.0.7.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="log4j-1.2.16" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
     <orderEntry type="library" exported="" name="lang-scala-0.2.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="jackson-databind-2.2.2" level="project" />
+    <orderEntry type="library" exported="" name="scala-compiler-2.10.2" level="project" />
+    <orderEntry type="library" exported="" name="scala-reflect-2.10.2" level="project" />
+    <orderEntry type="library" exported="" name="scala-library-2.10.2" level="project" />
   </component>
 </module>
 
