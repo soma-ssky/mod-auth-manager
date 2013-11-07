@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lang-scala-0.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/vertx/lang-scala/0.2.0-SNAPSHOT/lang-scala-0.2.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/vertx/lang-scala/0.2.0-SNAPSHOT/lang-scala-0.2.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
