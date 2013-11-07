@@ -1,0 +1,6 @@
+-classpath '/Users/junehyuk/vertx-scalaproject/build/classes/main:/Users/junehyuk/vertx-scalaproject/build/resources/main:/Users/junehyuk/.gradle/caches/artifacts-26/filestore/org.scala-lang/scala-library/2.10.3/jar/21d99cee3d3e478255ef9fcc90b571fb2ab074fc/scala-library-2.10.3.jar:/Users/junehyuk/.gradle/caches/artifacts-26/filestore/org.scala-lang/scala-compiler/2.10.3/jar/fc9759d060ae131a73c020d477e25a14534cbedd/scala-compiler-2.10.3.jar:/Users/junehyuk/.m2/repository/io/vertx/lang-scala/0.2.0-SNAPSHOT/lang-scala-0.2.0-SNAPSHOT.jar:/Users/junehyuk/.gradle/caches/artifacts-26/filestore/org.scala-lang/scala-reflect/2.10.3/jar/16dc45094c2d8919d21ee16a46a7ff7fa2aa3c88/scala-reflect-2.10.3.jar'
+-d '/Users/junehyuk/vertx-scalaproject/build/docs/javadoc'
+-doctitle 'vertx-scalaproject 0.1 API'
+-quiet 
+-windowtitle 'vertx-scalaproject 0.1 API'
+'/Users/junehyuk/vertx-scalaproject/src/main/scala/BCrypt.java'
