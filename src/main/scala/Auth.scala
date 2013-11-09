@@ -1,11 +1,8 @@
 
+import com.sun.xml.internal.fastinfoset.stax.events.EventBase
 import org.vertx.java.busmods.BusModBase
-import org.vertx.java.core.AsyncResult
-import org.vertx.java.core.buffer.Buffer
 import org.vertx.scala.platform.Verticle
-import org.vertx.scala.core.Vertx
 import org.vertx.scala.core.eventbus._
-import org.vertx.scala.core.http._
 import org.vertx.scala.core.json._
 
 import java.util.Date                     // ISODate
@@ -16,7 +13,7 @@ import java.math.BigInteger;              // Session
 
 
 class Auth extends Verticle{
-    
+
   //////////////////////////////////////////////
   // User Module
   //////////////////////////////////////////////
@@ -30,7 +27,7 @@ class Auth extends Verticle{
 
   //회원가입
   def users_signup(msg:Message[JsonObject]){
-        
+
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"save","collection":"User"}""")
 
@@ -43,8 +40,9 @@ class Auth extends Verticle{
     msg.body.getObject("document").removeField("password")
     msg.body.getObject("document").removeField("_id")
 
+
     jsonData.putObject("document",msg.body.getObject("document"))
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)){
         resultData.putString("objectId",mongoMsg.body.getString("_id"))
         resultData.putString("createdAt",msg.body.getObject("document").getString("createdAt"))
@@ -56,7 +54,7 @@ class Auth extends Verticle{
         msg.reply(resultData)
       }
 
-    }}
+    })
 
   }
 
@@ -67,7 +65,7 @@ class Auth extends Verticle{
     val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
 
         if(BCrypt.checkpw(msg.body.getObject("document").getString("password"),mongoMsg.body.getObject("result").getString("bcryptPassword"))==true){
@@ -86,7 +84,7 @@ class Auth extends Verticle{
         resultData.putString("error","invalid login parameters")
         msg.reply(resultData)
       }
-    }}
+    })
 
   }
 
@@ -108,7 +106,7 @@ class Auth extends Verticle{
     val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"_id":""""+msg.body.getObject("document").getString("objectId")+""""}"""))
 
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
 
         mongoMsg.body.getObject("result").putString("objectId",mongoMsg.body.getObject("result").getString("_id"))
@@ -121,7 +119,7 @@ class Auth extends Verticle{
         resultData.putString("error","object not found for get")
         msg.reply(resultData)
       }
-    }}
+    })
 
   }
 
@@ -132,7 +130,7 @@ class Auth extends Verticle{
     println(msg.body.getObject("document").getString("username"))
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
         if(msg.body.getObject("document").getString("sessionToken") == mongoMsg.body.getObject("result").getString("sessionToken")) {
 
@@ -148,14 +146,14 @@ class Auth extends Verticle{
           val jsonUpdateData = new JsonObject("""{"action":"update","collection":"User","criteria":{"_id",""""+msg.body.getObject("document").getString("objectId")+
             """"},"$set":{""""+msg.body.getObject("document")+""""}, "upsert" : "true", "multi" : "false" }""")
 
-          vertx.eventBus.send("vertx.mongo",jsonUpdateData){mongoMsg:Message[JsonObject]=>{
+          vertx.eventBus.send("vertx.mongo",jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
 
             resultData.putString("updatedAt",msg.body.getObject("document").getString("updatedAt"))
             //비밀번호가 변경되면 세션도 다시 지정함.
             if(ChangePasswd) resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken"))
             msg.reply(resultData)
 
-          }}
+          })
 
         } else { // 회원의 비밀번호가 틀렸을 때
           resultData.putString("code","101")
@@ -167,7 +165,7 @@ class Auth extends Verticle{
         resultData.putString("error","object not found for update")
         msg.reply(resultData)
       }
-    }}
+    })
 
   }
 
@@ -181,10 +179,10 @@ class Auth extends Verticle{
     jsonData.putString("keys","")
     jsonData.putString("limit","0")
 
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
 
 
-    }}
+    })
 
   }
 
@@ -196,16 +194,16 @@ class Auth extends Verticle{
     println(msg.body.getObject("document").getString("username"))
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
-    vertx.eventBus.send("vertx.mongo",jsonData){mongoMsg:Message[JsonObject]=>{
+    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
 
         if(msg.body.getObject("document").getString("sessionToken") == mongoMsg.body.getObject("result").getString("sessionToken")) {
 
           val jsonDeleteData = new JsonObject("""{"action":"delete","collection":"User","matcher":{"username",""""+msg.body.getObject("document").getString("username")+
             """"}, "writeConcern" : "SAFE"}""")
-          vertx.eventBus.send("vertx.mongo",jsonDeleteData){mongoDelMsg:Message[JsonObject]=>{
+          vertx.eventBus.send("vertx.mongo",jsonDeleteData, (mongoDelMsg:Message[JsonObject])=>{
             msg.reply(mongoDelMsg.body.getObject("result"))
-          }}
+          })
 
         } else { // 회원의 비밀번호가 틀렸을 때
           resultData.putString("code","101")
@@ -217,7 +215,7 @@ class Auth extends Verticle{
         resultData.putString("error","invalid login parameters")
         msg.reply(resultData)
       }
-    }}
+    })
 
 
   }
@@ -231,14 +229,14 @@ class Auth extends Verticle{
   //Module Test
   def users_ping(msg:Message[JsonObject]){
     val pingReply = new JsonObject()
-    pingReply.putString("type:","pong")
+    pingReply.putString("action:","pong")
     pingReply.putString("time:",dateFormat.format(new Date))
     msg.reply(pingReply)
   }
 
   // Auth Event Handler
   def authHandle(msg:Message[JsonObject]){
-    val event = msg.body.getString("type")
+    val event = msg.body.getString("action")
 
     event match{
       case "signup" => users_signup(msg)
@@ -254,41 +252,13 @@ class Auth extends Verticle{
     }
   }
 
-
   override def start()
   {
+    vertx.eventBus.registerHandler("ssky.auth.manager",authHandle _)
+    serverlog("Auth 서버가 정상적으로 실행되었습니다.")
 
-    val eventbus = vertx.eventBus
-    var routeMatcher = new RouteMatcher
-
-    // 기본 설정
-    val config_ssky = new JsonObject()
-    config_ssky.putString("url","http://api.ssky.io/") // URL 설정
-    config_ssky.putString("host","localhost")         // 호스트 설정
-    config_ssky.putNumber("port",8080)                // 포트 설정
-
-    // 몽고DB 설정
-    /*
-    val config_database = new JsonObject()
-    config_database.putString("address","vertx.mongo")
-    config_database.putString("host","127.0.0.1")
-    config_database.putNumber("port",27017)
-    config_database.putNumber("pool_size",20)
-    config_database.putString("db_name","test")
-    */
-
-    // 초기화 작업
-    //serverlog("서버가 시작되었습니다.")
-    //container.deployModule("io.vertx~mod-mongo-persistor~2.0.0-final",config_database,1)
-    eventbus.registerHandler("ssky.auth")(authHandle _)
-
-    serverlog("서버가 정상적으로 실행되었습니다.")
 
   }
-
-  // 서버 로그
-  //def handle(request:HttpServerRequest){ request.response.end("hello mod-lang-scala!!") }
-  //override def stop(){ serverlog("서버가 정상적으로 종료되었습니다.") }
 
 
 }

@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="testtools-2.0.0-final">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/io/vertx/testtools/2.0.0-final/testtools-2.0.0-final.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

@@ -60,7 +60,7 @@ dependencies {
   // If you're creating Groovy compiled verticles you may need the following dependencies
   compile "org.scala-lang:scala-library:$scalaVersion"
   compile "org.scala-lang:scala-compiler:$scalaVersion"
-  compile "io.vertx:lang-scala:0.2.0-SNAPSHOT"
+  compile "io.vertx:lang-scala:0.2.0"
   provided "io.vertx:vertx-core:$vertxVersion"
   provided "io.vertx:vertx-platform:$vertxVersion"
   testCompile "junit:junit:$junitVersion"

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lang-scala-0.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/lang-scala/0.2.0/jar/7890f2afd9079841bd70d739d90f66d6c11a2a2f/lang-scala-0.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/lang-scala/0.2.0/source/81403337150a5d40a653464b4ee9d57308a74a40/lang-scala-0.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

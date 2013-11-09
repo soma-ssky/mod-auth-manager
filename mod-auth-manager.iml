@@ -14,22 +14,52 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="vertx-platform-2.0.1-final" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="vertx-core-2.0.1-final" level="project" />
     <orderEntry type="library" scope="TEST" name="hamcrest-core-1.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="slf4j-api-1.6.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="jackson-annotations-2.2.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="testtools-2.0.0-final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="jackson-core-2.2.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="hazelcast-2.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="netty-all-4.0.7.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="log4j-1.2.16" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
-    <orderEntry type="library" exported="" name="lang-scala-0.2.0-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="jackson-databind-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="scala-compiler-2.10.2" level="project" />
     <orderEntry type="library" exported="" name="scala-reflect-2.10.2" level="project" />
     <orderEntry type="library" exported="" name="scala-library-2.10.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="bcprov-jdk15-140" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-core-api-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-jndi-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-core-constants-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-core-entry-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldif-0.9.19" level="project" />
+    <orderEntry type="library" exported="" name="lang-scala-0.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-converter-0.9.19" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="vertx-core-2.1M1" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-constants-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-protocol-dns-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-schema-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="antlr-2.7.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-schema-manager-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="testtools-2.0.2-final" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-i18n-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-core-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-utils-1.5.7" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="netty-all-4.0.11.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-schema-dao-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-dsml-parser-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-i18n-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-ldap-schema-loader-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-asn1-codec-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-asn1-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="xml-apis-1.0.b2" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-core-jndi-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="commons-collections-3.2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="commons-lang-2.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="mina-core-2.0.0-RC1" level="project" />
+    <orderEntry type="library" scope="TEST" name="apacheds-protocol-shared-1.5.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="dom4j-1.6.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="vertx-platform-2.1M1" level="project" />
+    <orderEntry type="library" scope="TEST" name="shared-cursor-0.9.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="xpp3-1.1.4c" level="project" />
   </component>
 </module>
 
