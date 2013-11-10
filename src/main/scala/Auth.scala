@@ -88,7 +88,7 @@ class Auth extends Verticle{
 
   }
 
-  // 이메일 전송부분쪽 해결 필요
+  // 이메일 전송부분
   def users_verifyingEmail(msg:Message[JsonObject]){
 
 
@@ -147,7 +147,6 @@ class Auth extends Verticle{
             """"},"$set":{""""+msg.body.getObject("document")+""""}, "upsert" : "true", "multi" : "false" }""")
 
           vertx.eventBus.send("vertx.mongo",jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
-
             resultData.putString("updatedAt",msg.body.getObject("document").getString("updatedAt"))
             //비밀번호가 변경되면 세션도 다시 지정함.
             if(ChangePasswd) resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken"))
@@ -169,23 +168,6 @@ class Auth extends Verticle{
 
   }
 
-  //회원정보쿼리
-  def users_query(msg:Message[JsonObject]){
-
-    val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"find","collection":"User"}""")
-    jsonData.putString("matcher","")
-    jsonData.putString("sort","")
-    jsonData.putString("keys","")
-    jsonData.putString("limit","0")
-
-    vertx.eventBus.send("vertx.mongo",jsonData, (mongoMsg:Message[JsonObject])=>{
-
-
-    })
-
-  }
-
   //회원 탈퇴
   def users_delete(msg:Message[JsonObject]){
 
@@ -198,13 +180,11 @@ class Auth extends Verticle{
       if(checkExist(mongoMsg)) {
 
         if(msg.body.getObject("document").getString("sessionToken") == mongoMsg.body.getObject("result").getString("sessionToken")) {
-
           val jsonDeleteData = new JsonObject("""{"action":"delete","collection":"User","matcher":{"username",""""+msg.body.getObject("document").getString("username")+
             """"}, "writeConcern" : "SAFE"}""")
           vertx.eventBus.send("vertx.mongo",jsonDeleteData, (mongoDelMsg:Message[JsonObject])=>{
             msg.reply(mongoDelMsg.body.getObject("result"))
           })
-
         } else { // 회원의 비밀번호가 틀렸을 때
           resultData.putString("code","101")
           resultData.putString("error","invalid login parameters")
@@ -216,7 +196,6 @@ class Auth extends Verticle{
         msg.reply(resultData)
       }
     })
-
 
   }
 
@@ -254,10 +233,9 @@ class Auth extends Verticle{
 
   override def start()
   {
+
     vertx.eventBus.registerHandler("ssky.auth.manager",authHandle _)
     serverlog("Auth 서버가 정상적으로 실행되었습니다.")
-
-
   }
 
 

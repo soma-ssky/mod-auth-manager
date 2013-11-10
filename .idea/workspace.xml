@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bd37d3f7-8df3-4851-8132-4dcb7564029c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Auth.scala" afterPath="$PROJECT_DIR$/src/main/scala/Auth.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/hazelcast_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/hazelcast_2_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lang_scala_0_2_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lang_scala_0_2_0_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mod-auth-manager.iml" afterPath="$PROJECT_DIR$/mod-auth-manager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/netty_all_4_0_7_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/netty_all_4_0_7_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/testtools_2_0_0_final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/testtools_2_0_0_final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/vertx_core_2_0_1_final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/vertx_core_2_0_1_final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/vertx_platform_2_0_1_final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/vertx_platform_2_0_1_final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mod-auth-manager.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383832257078" ignored="false" />
-    <file path="/Auth.scala" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1384009216396" ignored="false" />
+    <file path="/Dummy.txt" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1384047765691" ignored="false" />
+    <file path="/Auth.scala" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1384050429712" ignored="false" />
     <file path="/mod.json" changelist="bd37d3f7-8df3-4851-8132-4dcb7564029c" time="1383823145105" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +23,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -70,7 +60,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -119,10 +108,8 @@
       <file leaf-file-name="Auth.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="36" selection-start="8566" selection-end="8566" vertical-scroll-proportion="0.46910754">
-              <folding>
-                <element signature="e#1#62#0" expanded="true" />
-              </folding>
+            <state line="235" column="4" selection-start="9386" selection-end="9386" vertical-scroll-proportion="0.7235023">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -316,8 +303,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="806" />
-    <option name="y" value="438" />
+    <option name="y" value="22" />
     <option name="width" value="1356" />
     <option name="height" value="833" />
   </component>
@@ -451,9 +437,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="gradle.tool.window.active" value="Tasks" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Groovy.gradle:build">
     <configuration default="false" name="gradle:build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
@@ -469,6 +455,12 @@
         <option name="Make" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -478,18 +470,25 @@
       <setting name="debug" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -517,19 +516,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -606,13 +592,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="806" y="438" width="1356" height="833" extended-state="0" />
+    <frame x="0" y="22" width="1356" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.170229" sideWeight="0.73706293" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -622,10 +607,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18167938" sideWeight="0.73706293" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18091603" sideWeight="0.73706293" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26293707" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -706,9 +692,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="28" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1#62#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,9 +762,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/lang-scala/0.2.0-SNAPSHOT/lang-scala-0.2.0-SNAPSHOT-sources.jar!/org/vertx/scala/core/eventbus/EventBus.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="55" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.33266532">
-          <folding />
-        </state>
+        <state line="61" column="55" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.33266532" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/lang-scala/0.2.0-SNAPSHOT/lang-scala-0.2.0-SNAPSHOT-sources.jar!/org/vertx/scala/core/eventbus/Message.scala">
@@ -792,17 +774,13 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/artifacts-23/filestore/io.vertx/lang-scala/0.2.0/source/81403337150a5d40a653464b4ee9d57308a74a40/lang-scala-0.2.0-sources.jar!/org/vertx/scala/core/eventbus/EventBus.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.33261338">
-          <folding />
-        </state>
+        <state line="37" column="6" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.33261338" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Auth.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="36" selection-start="8566" selection-end="8566" vertical-scroll-proportion="0.46910754">
-          <folding>
-            <element signature="e#1#62#0" expanded="true" />
-          </folding>
+        <state line="235" column="4" selection-start="9386" selection-end="9386" vertical-scroll-proportion="0.7235023">
+          <folding />
         </state>
       </provider>
     </entry>
