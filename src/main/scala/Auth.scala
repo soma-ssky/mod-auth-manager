@@ -25,6 +25,7 @@ class Auth extends Verticle{
   val THIS_ADDRESS = "ssky.auth.manager";
   val MONGO_ADDRESS = "vertx.mongo.persistor";
 
+  //아이디 존재여부 체크
   def checkExist(msg:Message[JsonObject]):Boolean = {
     msg.body.getString("status").equals("ok") && (msg.body.getObject("result") != null)
   }
@@ -36,61 +37,87 @@ class Auth extends Verticle{
       else ?:[U](f(x))
   }
 
-  //회원가입
-  def users_signup(msg:Message[JsonObject]){
+  def users_signup_make(msg:Message[JsonObject]){
 
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"save","collection":"User"}""")
+
+    val jsonIdCheck = new JsonObject("""{"action":"findone","collection":"User"}""")
+    jsonIdCheck.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
+
+    vertx.eventBus.send(MONGO_ADDRESS,jsonIdCheck, (idCheckMsg:Message[JsonObject])=>{
+      if(!checkExist(idCheckMsg)) {
+
+        //회원의 기본적인 데이터 입력
+        msg.body.getObject("document").putString("createdAt",dateFormat.format(new Date))
+        msg.body.getObject("document").putString("sessionToken",new BigInteger(130, random).toString(25))
+        msg.body.getObject("document").putString("bcryptPassword",BCrypt.hashpw(msg.body.getObject("document").getString("password"),BCrypt.gensalt() ))
+
+        msg.body.getObject("document").removeField("password")
+        msg.body.getObject("document").removeField("_id")
+
+        jsonData.putObject("document",msg.body.getObject("document"))
+        vertx.eventBus.send(MONGO_ADDRESS, jsonData, (mongoMsg:Message[JsonObject])=>{
+          resultData.putString("objectId",mongoMsg.body.getString("_id"))
+          resultData.putString("username",msg.body.getObject("document").getString("username"))
+          resultData.putString("createdAt",msg.body.getObject("document").getString("createdAt"))
+          resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken"))
+          msg.reply(resultData)
+        })
+
+      } else {
+        resultData.putString("code","202")
+        resultData.putString("error","username "+msg.body.getObject("document").getString("username")+" already taken")
+        msg.reply(resultData)
+      }
+    })
+
+  }
+
+  //회원가입
+  def users_signup(msg:Message[JsonObject]){
+
+    msg.body.getObject("document").removeField("_ApplicationId")
+    msg.body.getObject("document").removeField("_JavaScriptKey")
+    msg.body.getObject("document").removeField("_ClientVersion")
+    msg.body.getObject("document").removeField("_InstallationId")
 
     //페이스북, SNS회원가입
     if(?:(msg.body)(_.getObject("document"))(_.getObject("authData"))(_.getObject("facebook"))() != null){
 
       val jsonSearch = new JsonObject("""{"action":"findone","collection":"User"}""")
       jsonSearch.putObject("matcher",new JsonObject(
-        """{"authData":{"facebook":{"id":""""+msg.body.getObject("document").getObject("authData").getObject("facebook").getString("id")+"""",
-       "access_token":"""" + msg.body.getObject("document").getObject("authData").getObject("facebook").getString("access_token")+""""}}}"""))
+        """{"authData.facebook.id":""""+msg.body.getObject("document").getObject("authData").getObject("facebook").getString("id")+""""}"""))
 
       vertx.eventBus.send(MONGO_ADDRESS, jsonSearch, (mongoRep:Message[JsonObject])=>{
         if(checkExist(mongoRep)) {
-          println("exsist")
-          return
+
+          mongoRep.body.getObject("result").putString("updatedAt",dateFormat.format(new Date))
+          mongoRep.body.getObject("result").putString("objectId",mongoRep.body.getObject("result").getString("_id"))
+
+          mongoRep.body.getObject("result").removeField("_id")
+          mongoRep.body.getObject("result").removeField("bcryptPassword")
+
+          val jsonUpdateData = new JsonObject("""{"action":"update","collection":"User","criteria":{"_id":""""+mongoRep.body.getObject("result").getString("objectId")+
+            """"}, "objNew":{ "$set" :{"authData":"""+msg.body.getObject("document").getObject("authData")+"""}}, "upsert" : true, "multi" : false}""")
+          vertx.eventBus.send(MONGO_ADDRESS,jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
+           msg.reply(mongoRep.body.getObject("result"))
+          })
+
         } else {
-          println("no_exsist")
           msg.body.getObject("document").putString("username",new BigInteger(130, random).toString(25))
           msg.body.getObject("document").putString("password",new BigInteger(130, random).toString(25))
+          users_signup_make(msg)
         }
       })
+    } else {
+      users_signup_make(msg)
     }
-
-    //회원의 기본적인 데이터 입력
-    msg.body.getObject("document").putString("createdAt",dateFormat.format(new Date))
-    msg.body.getObject("document").putString("updatedAt",dateFormat.format(new Date))
-    msg.body.getObject("document").putString("sessionToken",new BigInteger(130, random).toString(25))
-    msg.body.getObject("document").putString("bcryptPassword",BCrypt.hashpw(msg.body.getObject("document").getString("password"),BCrypt.gensalt() ))
-
-    msg.body.getObject("document").removeField("password")
-    msg.body.getObject("document").removeField("_id")
-
-    jsonData.putObject("document",msg.body.getObject("document"))
-
-    vertx.eventBus.send(MONGO_ADDRESS, jsonData, (mongoMsg:Message[JsonObject])=>{
-
-        resultData.putString("objectId",mongoMsg.body.getString("_id"))
-        resultData.putString("createdAt",msg.body.getObject("document").getString("createdAt"))
-        resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken"))
-        msg.reply(resultData)
-
-        //resultData.putString("code","202")
-        //resultData.putString("error","username "+msg.body.getObject("document").getString("username")+" already taken")
-        //msg.reply(resultData)
-    })
-
 
   }
 
   //로그인
   def users_login(msg:Message[JsonObject]){
-
 
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
@@ -125,7 +152,6 @@ class Auth extends Verticle{
   // 이메일 전송부분
   def users_verifyingEmail(msg:Message[JsonObject]){
 
-
   }
 
   //아이디 비밀번호 찾기
@@ -142,7 +168,6 @@ class Auth extends Verticle{
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
-
         mongoMsg.body.getObject("result").putString("objectId",mongoMsg.body.getObject("result").getString("_id"))
         mongoMsg.body.getObject("result").removeField("_id")
         mongoMsg.body.getObject("result").removeField("bcryptPassword")
@@ -159,6 +184,12 @@ class Auth extends Verticle{
 
   //회원정보 수정
   def users_update(msg:Message[JsonObject]){
+
+    msg.body.getObject("document").removeField("_ApplicationId")
+    msg.body.getObject("document").removeField("_JavaScriptKey")
+    msg.body.getObject("document").removeField("_ClientVersion")
+    msg.body.getObject("document").removeField("_InstallationId")
+
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
@@ -177,14 +208,12 @@ class Auth extends Verticle{
           }
 
           val jsonUpdateData = new JsonObject("""{"action":"update","collection":"User","criteria":{"_id",""""+msg.body.getObject("document").getString("objectId")+
-            """"},"$set":{""""+msg.body.getObject("document")+""""}, "upsert" : "true", "multi" : "false" }""")
+            """"}, "objNew":{ "$set" :{"""+msg.body.getObject("document")+""")}, "upsert" : true, "multi" : false}""")
 
           vertx.eventBus.send(MONGO_ADDRESS,jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
             resultData.putString("updatedAt",msg.body.getObject("document").getString("updatedAt"))
-            //비밀번호가 변경되면 세션도 다시 지정함.
-            if(ChangePasswd) resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken"))
+            if(ChangePasswd) resultData.putString("sessionToken",msg.body.getObject("document").getString("sessionToken")) //비밀번호가 변경되면 세션도 다시 지정함.
             msg.reply(resultData)
-
           })
 
         } else { // 회원의 비밀번호가 틀렸을 때
@@ -287,8 +316,6 @@ class Auth extends Verticle{
     //Signing Up
     routeMatcher.post("/:version/users", (req:HttpServerRequest)=>{
 
-
-
       req.dataHandler( (data:Buffer) => {
         val sendJson = new JsonObject("""{"action":"signup","document":"""+data.toString()+"""}""")
         eventbus.send(THIS_ADDRESS,sendJson , (msg:Message[JsonObject])=>{
@@ -366,8 +393,6 @@ class Auth extends Verticle{
       })
 
     })
-
-
 
 
     vertx.createHttpServer.requestHandler(routeMatcher).listen(8080)
