@@ -22,8 +22,8 @@ class Auth extends Verticle{
   val random = new SecureRandom()
   def serverlog(message:String){ println("[SSKY_AUTH] " + message) }
 
-  val THIS_ADDRESS = "ssky.auth.manager";
-  val MONGO_ADDRESS = "vertx.mongo.persistor";
+  var THIS_ADDRESS = "ssky.auth.manager";
+  var MONGO_ADDRESS = "vertx.mongo.persistor";
 
   //아이디 존재여부 체크
   def checkExist(msg:Message[JsonObject]):Boolean = {
@@ -40,9 +40,9 @@ class Auth extends Verticle{
   def users_signup_make(msg:Message[JsonObject]){
 
     val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"save","collection":"User"}""")
+    val jsonData = new JsonObject("""{"action":"save","collection":"_User"}""")
 
-    val jsonIdCheck = new JsonObject("""{"action":"findone","collection":"User"}""")
+    val jsonIdCheck = new JsonObject("""{"action":"findone","collection":"_User"}""")
     jsonIdCheck.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonIdCheck, (idCheckMsg:Message[JsonObject])=>{
@@ -77,6 +77,7 @@ class Auth extends Verticle{
   //회원가입
   def users_signup(msg:Message[JsonObject]){
 
+
     msg.body.getObject("document").removeField("_ApplicationId")
     msg.body.getObject("document").removeField("_JavaScriptKey")
     msg.body.getObject("document").removeField("_ClientVersion")
@@ -85,7 +86,7 @@ class Auth extends Verticle{
     //페이스북, SNS회원가입
     if(?:(msg.body)(_.getObject("document"))(_.getObject("authData"))(_.getObject("facebook"))() != null){
 
-      val jsonSearch = new JsonObject("""{"action":"findone","collection":"User"}""")
+      val jsonSearch = new JsonObject("""{"action":"findone","collection":"_User"}""")
       jsonSearch.putObject("matcher",new JsonObject(
         """{"authData.facebook.id":""""+msg.body.getObject("document").getObject("authData").getObject("facebook").getString("id")+""""}"""))
 
@@ -98,7 +99,7 @@ class Auth extends Verticle{
           mongoRep.body.getObject("result").removeField("_id")
           mongoRep.body.getObject("result").removeField("bcryptPassword")
 
-          val jsonUpdateData = new JsonObject("""{"action":"update","collection":"User","criteria":{"_id":""""+mongoRep.body.getObject("result").getString("objectId")+
+          val jsonUpdateData = new JsonObject("""{"action":"update","collection":"_User","criteria":{"_id":""""+mongoRep.body.getObject("result").getString("objectId")+
             """"}, "objNew":{ "$set" :{"authData":"""+msg.body.getObject("document").getObject("authData")+"""}}, "upsert" : true, "multi" : false}""")
           vertx.eventBus.send(MONGO_ADDRESS,jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
            msg.reply(mongoRep.body.getObject("result"))
@@ -120,7 +121,7 @@ class Auth extends Verticle{
   def users_login(msg:Message[JsonObject]){
 
     val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
+    val jsonData = new JsonObject("""{"action":"findone","collection":"_User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonData, (mongoMsg:Message[JsonObject])=>{
@@ -163,7 +164,7 @@ class Auth extends Verticle{
   def users_retrieve(msg:Message[JsonObject]){
 
     val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
+    val jsonData = new JsonObject("""{"action":"findone","collection":"_User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"_id":""""+msg.body.getObject("document").getString("objectId")+""""}"""))
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonData, (mongoMsg:Message[JsonObject])=>{
@@ -191,7 +192,7 @@ class Auth extends Verticle{
     msg.body.getObject("document").removeField("_InstallationId")
 
     val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
+    val jsonData = new JsonObject("""{"action":"findone","collection":"_User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonData, (mongoMsg:Message[JsonObject])=>{
@@ -207,7 +208,7 @@ class Auth extends Verticle{
             msg.body.getObject("document").removeField("password")
           }
 
-          val jsonUpdateData = new JsonObject("""{"action":"update","collection":"User","criteria":{"_id",""""+msg.body.getObject("document").getString("objectId")+
+          val jsonUpdateData = new JsonObject("""{"action":"update","collection":"_User","criteria":{"_id",""""+msg.body.getObject("document").getString("objectId")+
             """"}, "objNew":{ "$set" :{"""+msg.body.getObject("document")+""")}, "upsert" : true, "multi" : false}""")
 
           vertx.eventBus.send(MONGO_ADDRESS,jsonUpdateData, (mongoMsg:Message[JsonObject])=>{
@@ -234,19 +235,19 @@ class Auth extends Verticle{
   def users_delete(msg:Message[JsonObject]){
 
     val resultData = new JsonObject()
-    val jsonData = new JsonObject("""{"action":"findone","collection":"User"}""")
+    val jsonData = new JsonObject("""{"action":"findone","collection":"_User"}""")
     jsonData.putObject("matcher",new JsonObject("""{"username":""""+msg.body.getObject("document").getString("username")+""""}"""))
 
     vertx.eventBus.send(MONGO_ADDRESS,jsonData, (mongoMsg:Message[JsonObject])=>{
       if(checkExist(mongoMsg)) {
 
         if(msg.body.getObject("document").getString("sessionToken") == mongoMsg.body.getObject("result").getString("sessionToken")) {
-          val jsonDeleteData = new JsonObject("""{"action":"delete","collection":"User","matcher":{"username",""""+msg.body.getObject("document").getString("username")+
+          val jsonDeleteData = new JsonObject("""{"action":"delete","collection":"_User","matcher":{"username",""""+msg.body.getObject("document").getString("username")+
             """"}, "writeConcern" : "SAFE"}""")
           vertx.eventBus.send(MONGO_ADDRESS,jsonDeleteData, (mongoDelMsg:Message[JsonObject])=>{
             msg.reply(mongoDelMsg.body.getObject("result"))
           })
-        } else { // 회원의 비밀번호가 틀렸을 때
+        } else { // 회원의 세션이 틀렸을 때
           resultData.putString("code","101")
           resultData.putString("error","invalid login parameters")
           msg.reply(resultData)
@@ -295,108 +296,12 @@ class Auth extends Verticle{
   var config = new JsonObject
   override def start()
   {
-
-    // 몽고DB 설정
-    val config_database = new JsonObject()
-    config_database.putString("address",MONGO_ADDRESS)
-    config_database.putString("host","127.0.0.1")
-    config_database.putNumber("port",27017)
-    config_database.putNumber("pool_size",20)
-    config_database.putString("db_name","test")
-    container.deployModule("io.vertx~mod-mongo-persistor~2.0.0-final",config_database,1)
-
     config = container.config()
-    println("Config is " + config.toString);
+
+    THIS_ADDRESS = config.getString("this_address");
+    MONGO_ADDRESS = config.getString("db_address");
 
     vertx.eventBus.registerHandler(THIS_ADDRESS, authHandle _)
-
-    val eventbus = vertx.eventBus
-    var routeMatcher = new RouteMatcher
-
-    //Signing Up
-    routeMatcher.post("/:version/users", (req:HttpServerRequest)=>{
-
-      req.dataHandler( (data:Buffer) => {
-        val sendJson = new JsonObject("""{"action":"signup","document":"""+data.toString()+"""}""")
-        eventbus.send(THIS_ADDRESS,sendJson , (msg:Message[JsonObject])=>{
-          req.response().putHeader("Access-Control-Allow-Origin","*")
-          req.response().putHeader("Content-Type","application/json")
-          req.response().putHeader("Location","http://localhost:8080/1/users/" + msg.body.getString("objectId"))
-          req.response().end(msg.body.toString)
-        })
-      })
-
-      /*
-      val urlParams = req.params
-      val userData = new JsonObject
-      userData.putString("username",urlParams("username").head)
-      userData.putString("password",urlParams("password").head)
-
-      val sendJson = new JsonObject("""{"action":"login"}""")
-      sendJson.putObject("document",userData)
-
-      eventbus.send(THIS_ADDRESS, sendJson, (msg:Message[JsonObject])=>{
-        req.response().end(msg.body.toString)
-      })           */
-
-
-
-
-
-
-    })
-
-    routeMatcher.post("/:version/login", (req:HttpServerRequest)=>{
-
-      req.dataHandler( (data:Buffer) => {
-        val sendJson = new JsonObject("""{"action":"login","document":"""+data.toString()+"""}""")
-        eventbus.send(THIS_ADDRESS, sendJson, (msg:Message[JsonObject])=>{
-          req.response().putHeader("Access-Control-Allow-Origin","*")
-          req.response().putHeader("Content-Type","application/json")
-          req.response().putHeader("Location","http://localhost:8080/1/users/" + msg.body.getString("objectId"))
-          req.response().end(msg.body.toString)
-        })
-      })
-
-      /*
-      val urlParams = req.params
-      val userData = new JsonObject
-      userData.putString("username",urlParams("username").head)
-      userData.putString("password",urlParams("password").head)
-
-      val sendJson = new JsonObject("""{"action":"login"}""")
-      sendJson.putObject("document",userData)
-
-      eventbus.send(THIS_ADDRESS, sendJson, (msg:Message[JsonObject])=>{
-        req.response().end(msg.body.toString)
-      })
-
-      */
-
-    })
-
-
-
-
-    //Retrieving Users
-    routeMatcher.get("/:version/users/:id", (req:HttpServerRequest) =>{
-
-      val urlParams = req.params
-      val userData = new JsonObject
-      userData.putString("objectId",urlParams("id").head)
-
-      val sendJson = new JsonObject("""{"type":"retrieve"}""")
-      sendJson.putObject("document",userData)
-
-      eventbus.send("ssky.auth",sendJson, (msg:Message[JsonObject])=>{
-        req.response().end(msg.body.toString)
-      })
-
-    })
-
-
-    vertx.createHttpServer.requestHandler(routeMatcher).listen(8080)
-    serverlog("Auth 서버가 정상적으로 실행되었습니다.")
   }
 
 }
