@@ -77,12 +77,6 @@ class Auth extends Verticle{
   //회원가입
   def users_signup(msg:Message[JsonObject]){
 
-
-    msg.body.getObject("document").removeField("_ApplicationId")
-    msg.body.getObject("document").removeField("_JavaScriptKey")
-    msg.body.getObject("document").removeField("_ClientVersion")
-    msg.body.getObject("document").removeField("_InstallationId")
-
     //페이스북, SNS회원가입
     if(?:(msg.body)(_.getObject("document"))(_.getObject("authData"))(_.getObject("facebook"))() != null){
 
@@ -185,11 +179,6 @@ class Auth extends Verticle{
 
   //회원정보 수정
   def users_update(msg:Message[JsonObject]){
-
-    msg.body.getObject("document").removeField("_ApplicationId")
-    msg.body.getObject("document").removeField("_JavaScriptKey")
-    msg.body.getObject("document").removeField("_ClientVersion")
-    msg.body.getObject("document").removeField("_InstallationId")
 
     val resultData = new JsonObject()
     val jsonData = new JsonObject("""{"action":"findone","collection":"_User"}""")
