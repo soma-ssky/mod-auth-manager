@@ -287,20 +287,10 @@ class Auth extends Verticle{
   {
     config = container.config()
 
-    THIS_ADDRESS = config.getString("this_address");
-    MONGO_ADDRESS = config.getString("db_address");
+    THIS_ADDRESS = config.getString("this_address")
+    MONGO_ADDRESS = config.getString("db_address")
 
     vertx.eventBus.registerHandler(THIS_ADDRESS, authHandle _)
 
-
-
-    var routeMatcher = new RouteMatcher
-    routeMatcher.post("/:version/users/:id", (req:HttpServerRequest)=>{
-
-    }
-
-    routeMatcher.options(){
-
-    }
-
+  }
 }
